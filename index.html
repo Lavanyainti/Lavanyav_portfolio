@@ -124,75 +124,23 @@
                 <h4>Email Me</h4>
                 <div class="mail">
                     <form id="contact-form">
-                        <input type="text" id="name" placeholder="Enter your name"><br><br>
-                        <input type="mail" id="mail" placeholder="Enter your mail"><br><br>
-                        <textarea  id="message" placeholder="Type your message here"></textarea><br><br>
-                        <button type="submit">Send</button>
+                        
+                            <input type="text" id="name" placeholder="Enter your name" >
+                            <div id="nameError" style="color: rgb(255, 102, 102); display: none;  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 400;">Please enter name.!</div><br><br>
+                        
+                            <input type="mail" id="mail" placeholder="Enter your mail">
+                            <div id="mailError" style="color: rgb(252, 65, 65); display: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"></div><br><br>
+                            <textarea  id="message" placeholder="Type your message here"></textarea>
+                            <div id="messageError" style="display: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(249, 74, 74);">Please enter something to send.!</div><br><br>
+                            <button type="submit">Send</button><br><br>
+                            <p id="responseMsg"></p>
                         <p id="response-msg" ></p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        const glowCursor = document.querySelector(".cursor-glow");
-
-        document.addEventListener("mousemove", (e) => {
-            glowCursor.style.left = `${e.clientX}px`;
-            glowCursor.style.top = `${e.clientY}px`;
-            glowCursor.style.opacity = "0.1";
-        });
-
-        document.addEventListener("mouseleave", () => {
-            glowCursor.style.opacity = "0";
-        });
-
-        document.addEventListener("mousemove", () => { //to scroll smoothly
-            glowCursor.style.opacity = "1";
-        });
-
-        document.querySelectorAll('.nav-item a').forEach(link => {
-            link.addEventListener('click', function (event) {
-             event.preventDefault(); // Prevent default link behavior
-        
-            const targetId = this.getAttribute('href'); // Get the target section ID
-             const targetElement = document.querySelector(targetId); // Select the target element
-        
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-            }
-        });
-    });
-
-    (function(){//()(); is a automatically called function
-        emailjs.init("-h7d-1QYZwY3xm2jZ");//initiating my email template ID
-    })();
-    
-    document.getElementById("contact-form").addEventListener("submit", function(event){
-        event.preventDefault();//preventing default event
-        var name=document.getElementById("name").value;
-        var mail=document.querySelector("#mail").value;
-        var message=document.querySelector("#message").value;
-        var responseMsg=document.querySelector("#response-msg");
-
-        emailjs.send("service_3r57y0n","template_48qyzed",{
-            from_name:name,
-            to_name:"Recipient",
-            message:message,
-            user_email:mail
-        }).then(response=>{
-            console.log("Success "+response);
-            responseMsg.textContent="Email sent successfully.!"
-            responseMsg.style.color="green"
-        }).catch(error=>{
-            console.log("Failed "+error)
-            responseMsg.textContent="Failed send mail.!"
-            responseMsg.style.color="red;"
-        });
-    });
+    <script src="script.js">
 
     </script>
 </body>
