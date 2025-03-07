@@ -1,0 +1,314 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(1, 13, 45);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.cursor-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgb(244, 236, 236,0.08) 20%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease-out;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+}
+.section{
+   
+    border: 1px solid none;
+}
+.section1{
+    padding: 30px 5%;
+    width: 30%;
+}
+.heading{
+    border: 1px solid none;
+    
+}
+.heading h1{
+    font-size: 4vw;
+}
+h1,h2{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2{
+    font-size: 2vw;
+    font-weight: 300;
+}
+p{
+   color:  #A8B2D1;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1vw;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-item a{
+    display: flex;
+    align-items: center;
+    color: #A8B2D1; 
+    position: relative;
+    padding-left: 40px; 
+    transition: font-size 1.9s ease, color 0.3s ease,padding-left 1.9s ease;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+.nav-menu div{
+    font-weight: 400;
+}
+
+.nav-item a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 30px; 
+    height: 2px; 
+    background-color: #A8B2D1;
+    transform: translateY(-50%);
+    opacity: 0.5; 
+    transition: width 1.5s ease;
+}
+.nav-item a:hover{
+    color: white;
+    font-size: 20px;
+    padding-left: 60px;
+
+}
+.nav-item a:hover::before{
+    opacity: 1;
+    width: 50px;
+}
+p b{
+    color: white;
+    font-weight: 400;
+}
+.certifications2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.certificate1{
+    width: 70%;
+    background-color: rgba(211, 211, 211, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.9s ease;
+    padding: 20px;
+}
+.certificate1:hover{
+    background-color: rgba(211, 211, 211, 0.1);
+}
+.certifications2 a button{
+    width: 100px;
+    text-decoration: none;
+    margin-top: 10px;
+    background-color: rgb(100, 245, 230,0.1);
+    padding:6px 5px;
+    color: #64f5e6;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.certifications2 button:hover{
+    cursor: pointer;
+}
+.certifications2 p{
+    margin: 0 auto;
+    color: #A8B2D1;
+    opacity: 1;
+
+}
+h2{
+    color: white;
+    font-weight: 400;
+}
+.certifications2 img{
+    width: 300px;
+    height: 200px;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: scroll;
+    padding: 50px;
+    width: 50%;
+}
+.section2::-webkit-scrollbar{
+    display: none;
+}
+
+h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #A8B2D1;
+    font-weight: 400;
+}
+a{
+    color: #A8B2D1;
+}
+i{
+    font-size: 30px;
+}
+.tasks{
+    transition: background-color 0.5s ease;
+    border: 5px;
+}
+.todo,.weather,.resume{
+    width: 80%;
+    padding: 5px;
+}
+.tasks h4{
+    color: white;
+}
+.tasks p{
+    margin-left: 30px;
+}
+.technologies{
+    display: flex;
+    flex-direction: row;
+    
+}
+.technologies button{
+    margin-left: 7%;
+    background-color: rgb(100, 245, 230,0.1);
+    color: #64f5e6;
+    padding: 1% 4%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    font-size: 1vw;
+    border-radius: 20px;
+}
+.tasks-sub{
+    margin-left: 30px;
+    border-radius: 5px;
+    transition: background-color 1.5s ease;
+}
+.tasks-sub:hover{
+    background-color: rgba(211, 211, 211, 0.1);
+    border-radius: 5px;
+}
+.tasks h4{
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.tasks h4:hover{
+    background-color: rgba(239, 174, 54, 0.1);
+    color: rgb(238, 158, 9);
+    cursor: pointer;
+
+}
+.contact h4{
+    color: white;
+}
+.sub-contact{
+    width: 70%;
+    margin-left: 80px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.sub-contact:hover{
+    background-color: rgb(168, 178, 209,0.1);
+}
+.sub-contact p{
+    padding: 5px;
+}
+input{
+    padding: 10px;
+    width: 50%;
+    background-color: rgb(168, 178, 209,0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+textarea{
+    width: 70%;
+    height: 200px;
+    background-color: rgb(168, 178, 209,0.1);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form button{
+    border: none;
+    width: 25%;
+    background-color: rgb(100, 245, 230,0.1);
+    padding:8px 10px;
+    color: #64f5e6;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    transition: background-color 0.5s ease;
+}
+form button:hover{
+    background-color: rgba(165, 253, 244, 0.2);
+    cursor: pointer;
+}
+
+.links a i{
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.links a i:hover{
+    background-color: rgb(168, 178, 209,0.1);
+}
+@media (max-width: 680px) {
+    .container {
+      flex-direction: column; /* Change to Column layout */
+    }
+    .section1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    .links{
+        margin-top: 20px;
+    }
+    
+    .section2{
+        width: 80%;
+        height: 80%;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+    }
+    .contactpart1{
+        margin-left: 10%;
+    }
+    .sub-section1{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        align-items: center;
+      }
+  }
