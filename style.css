@@ -3,6 +3,7 @@ html {
 }
 body{
     background-color: rgb(1, 13, 45);
+    width: 100%;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -41,6 +42,7 @@ h2{
     font-size: 25px;
     font-weight: 300;
 }
+
 .about p{
     margin: 15px;
 }
@@ -71,7 +73,6 @@ p{
     align-items: center;
     color: #A8B2D1; 
     position: relative;
-    padding-left: 40px; 
     transition: font-size 1.9s ease, color 0.3s ease,padding-left 1.9s ease;
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,26 +83,13 @@ p{
 }
 
 .nav-item a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 30px; 
-    height: 2px; 
-    background-color: #A8B2D1;
-    transform: translateY(-50%);
-    opacity: 0.5; 
-    transition: width 1.5s ease;
+
 }
 .nav-item a:hover{
-    color: white;
-    font-size: 20px;
-    padding-left: 60px;
 
 }
 .nav-item a:hover::before{
-    opacity: 1;
-    width: 50px;
+
 }
 p b{
     color: white;
@@ -191,7 +179,7 @@ i{
     color: white;
 }
 .tasks p{
-    margin-left: 30px;
+    margin-left: 1%;
 }
 .technologies{
     display: flex;
@@ -199,19 +187,19 @@ i{
     
 }
 .technologies button{
-    margin-left: 7%;
+    margin-left: 5%;
     background-color: rgb(100, 245, 230,0.1);
     color: #64f5e6;
     padding: 1% 4%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: none;
-    font-size: 1vw;
+    font-size: 12px;
     border-radius: 20px;
 }
 .tasks-sub{
     padding: 1px 5px;
     width: 100%;
-    margin-left: 30px;
+    margin-left: 20px;
     border-radius: 5px;
     transition: background-color 1.5s ease;
 }
@@ -221,8 +209,7 @@ i{
 }
 .tasks h4{
     width: 100px;
-    padding: 5px;
-    text-align: center;
+    /* padding: 5px; */
     border-radius: 8px;
     border: 1px solid none;
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -237,8 +224,10 @@ i{
     color: white;
 }
 .sub-contact{
-    width: 70%;
-    margin-left: 80px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
     border-radius: 8px;
     transition: background-color 0.5s ease;
 }
@@ -246,7 +235,7 @@ i{
     background-color: rgb(168, 178, 209,0.1);
 }
 .sub-contact p{
-    padding: 5px;
+    padding: 10px;
 }
 form input{
     padding: 10px;
@@ -295,6 +284,63 @@ form button:hover{
 .links a i:hover{
     background-color: rgb(168, 178, 209,0.1);
 }
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.project1,.project2{
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+.project1:hover,.project2:hover{
+    background-color: rgb(168, 178, 209,0.1);
+}
+.years{
+    width: 20%;
+}
+.summary{
+    width: 70%;
+}
+.years h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    color: white;
+}
+@media(min-width: 680px){
+    .nav-item a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 30px; 
+        height: 2px; 
+        background-color: #A8B2D1;
+        transform: translateY(-50%);
+        opacity: 0.5; 
+        transition: width 1.5s ease;
+    }
+    .nav-item a{
+        padding-left: 40px;
+    }
+    .nav-item a:hover::before{
+        opacity: 1;
+        width: 50px;
+    }
+
+    .nav-item a:hover{
+        color: white;
+        font-size: 20px;
+        padding-left: 60px;
+    
+    }
+}
+
+
 @media (max-width: 680px) {
     .container {
       flex-direction: column; /* Change to Column layout */
@@ -303,23 +349,34 @@ form button:hover{
         display: flex;
         flex-direction: column;
         width: 90%;
+        height: 60vh;
         padding: 10px 5%;
     }
     .links{
         margin-top: 20px;
     }
-    
+    .nav-menu{
+        flex-direction: row;
+        gap:2%;
+        margin-top: 20px;
+      
+    }
+    .nav-item a:hover{
+        color: white;
+    }
+    .links{
+        display: flex;
+        flex-direction: row;
+    }
     .section2{
         width: 80%;
-        height: 80%;
+        height: 50vh;
         overflow: visible;
         display: flex;
         flex-direction: column;
-        padding: 20px 50px;
+        padding: 20px 10%;
     }
-    .contactpart1{
-        margin-left: 10%;
-    }
+    
     .sub-section1{
         display: flex;
         flex-direction: column;
